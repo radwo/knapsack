@@ -51,6 +51,10 @@ module Knapsack
           end
         end
 
+        until !example_group.has_key?(:example_group)
+          example_group = example_group.fetch(:example_group)
+        end
+
         example_group[:file_path]
       end
     end
